@@ -82,7 +82,7 @@ export default async function Home() {
             <div className="w-[80%] h-[80%] rounded-full border border-metal/20 flex items-center justify-center">
               <div className="w-[60%] h-[60%] rounded-full border border-metal/10" />
             </div>
-            <img src="/frames/frame-00096.jpg" alt="Mechanism" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80" />
+            <img src="/frames/frame-00001.jpg" alt="Mechanism" className="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80" />
           </div>
           <div>
             <p className="text-xs tracking-[0.3em] uppercase mb-6 text-accent">Craftsmanship</p>
