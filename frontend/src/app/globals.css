@@ -11,7 +11,7 @@
 
 @theme inline {
   --color-background: var(--background);
-  --color-secondary: var(--background-secondary);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-metal: var(--metal);
@@ -23,6 +23,31 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Safe area padding for modern phones with notches */
+@supports (padding: env(safe-area-inset-bottom)) {
+  footer {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Prevent text size adjustment on orientation change */
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
 }
 
 /* Custom Scrollbar for smooth luxury feel */
@@ -39,3 +64,4 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
+
