@@ -94,7 +94,7 @@ export default function ScrollDisassemblyAnimation() {
           height={1080}
           className="w-full h-full object-cover"
         />
-        <div className="absolute bottom-10 left-0 w-full flex justify-center z-20 pointer-events-none">
+        <div className="absolute bottom-16 md:bottom-10 left-0 w-full flex justify-center z-20 pointer-events-none">
            <motion.div 
              style={{ opacity: useTransform(scrollYProgress, [0, 0.1], [1, 0]) }}
              className="flex flex-col items-center"
